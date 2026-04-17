@@ -1,4 +1,9 @@
 # Memo
+<img src="assets/image.png" width="300">
+
+> 윈도우 스티커메모 & 메모장이 아쉬워서 만든 메모 프로그램
+
+[Link](https://drive.google.com/file/d/1oWVmUNt5S2khJg-Q2o7eFuDRGF-fcr97/view?usp=sharing) 에서 다운로드 -> `install.cmd`로 설치
 
 A Windows memo app inspired by Sticky Notes and Notepad. Frameless sticky windows,
 per-note "always on top", WYSIWYG markdown editing, and a tray icon with a notes list.
