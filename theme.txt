@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f5f7f9",
+                    "tertiary-fixed-dim": "#f976ba",
+                    "primary-dim": "#00557b",
+                    "secondary-fixed-dim": "#78cef7",
+                    "outline-variant": "#abadaf",
+                    "surface-variant": "#d9dde0",
+                    "tertiary-fixed": "#ff8bc5",
+                    "inverse-on-surface": "#9a9d9f",
+                    "primary-container": "#34b5fa",
+                    "surface-container-low": "#eef1f3",
+                    "secondary-dim": "#005672",
+                    "primary": "#00628c",
+                    "primary-fixed": "#34b5fa",
+                    "on-tertiary-fixed-variant": "#73004b",
+                    "tertiary-container": "#ff8bc5",
+                    "on-secondary-fixed": "#00394c",
+                    "surface-container-highest": "#d9dde0",
+                    "inverse-primary": "#34b5fa",
+                    "on-primary": "#e9f4ff",
+                    "surface-tint": "#00628c",
+                    "error-container": "#fb5151",
+                    "primary-fixed-dim": "#17a8ec",
+                    "surface": "#f5f7f9",
+                    "secondary": "#006382",
+                    "background": "#f5f7f9",
+                    "on-surface": "#2c2f31",
+                    "on-tertiary-fixed": "#360021",
+                    "surface-container-high": "#dfe3e6",
+                    "tertiary-dim": "#912063",
+                    "surface-dim": "#d0d5d8",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#93dbff",
+                    "on-error": "#ffefee",
+                    "inverse-surface": "#0b0f10",
+                    "on-tertiary": "#ffeff3",
+                    "outline": "#747779",
+                    "on-error-container": "#570008",
+                    "on-secondary": "#e5f5ff",
+                    "tertiary": "#a02d70",
+                    "error": "#b31b25",
+                    "on-primary-fixed-variant": "#003954",
+                    "on-secondary-fixed-variant": "#005773",
+                    "on-tertiary-container": "#630040",
+                    "on-primary-fixed": "#00121e",
+                    "on-background": "#2c2f31",
+                    "on-secondary-container": "#004d67",
+                    "error-dim": "#9f0519",
+                    "on-primary-container": "#003047",
+                    "on-surface-variant": "#595c5e",
+                    "secondary-container": "#93dbff",
+                    "surface-container": "#e5e9eb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::selection {
+            background-color: #93dbff;
+            color: #004d67;
+        }
+        .app-window {
+            box-shadow: 0 32px 64px -12px rgba(0, 98, 140, 0.08), 0 16px 32px -16px rgba(0, 98, 140, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface-bright min-h-screen text-on-surface selection:bg-secondary-container selection:text-on-secondary-container flex items-center justify-center p-4 md:p-8">
+<!-- Unified Application Window -->
+<div class="app-window relative flex flex-col w-full max-w-4xl bg-white dark:bg-slate-900 rounded-[2.5rem] overflow-hidden border border-white/40 ring-1 ring-black/[0.05]">
+<!-- Large Title Section -->
+<div class="px-8 pt-10 pb-6 md:px-14 md:pt-14 md:pb-8">
+<div class="max-w-prose mx-auto flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<input class="text-5xl md:text-6xl font-extrabold text-primary dark:text-sky-400 tracking-tight bg-transparent border-none focus:ring-0 p-0 w-full placeholder:text-primary/20 font-headline" placeholder="Note Title" type="text" value="Skybound Notes"/>
+<div class="flex items-center gap-3 shrink-0 ml-4">
+<button class="p-2.5 text-slate-500 hover:text-primary hover:bg-surface-container-low rounded-full transition-all active:scale-95" title="Always on top">
+<span class="material-symbols-outlined text-[24px]" data-icon="push_pin">push_pin</span>
+</button>
+<button class="px-6 py-2 text-sm font-bold text-white bg-primary hover:bg-primary-dim rounded-full transition-all shadow-md hover:shadow-lg active:scale-95">
+                        Save
+                    </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Toolbar Header -->
+<header class="flex items-center justify-between px-8 py-4 border-y border-surface-container/30 bg-white/50 backdrop-blur-md sticky top-0 z-10">
+<div class="max-w-prose mx-auto w-full flex items-center justify-between">
+<div class="flex items-center gap-1 sm:gap-2">
+<!-- Style Group -->
+<div class="flex items-center gap-0.5 bg-surface-container-low/50 p-1 rounded-xl">
+<button class="p-2 rounded-lg text-slate-700 hover:bg-white hover:shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="format_bold">format_bold</span>
+</button>
+<button class="p-2 rounded-lg text-slate-700 hover:bg-white hover:shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="format_italic">format_italic</span>
+</button>
+<button class="p-2 rounded-lg text-slate-700 hover:bg-white hover:shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="format_underlined">format_underlined</span>
+</button>
+</div>
+<div class="w-px h-6 bg-outline-variant/30 mx-1 hidden sm:block"></div>
+<!-- Alignment & Lists -->
+<div class="hidden md:flex items-center gap-0.5">
+<button class="p-2 rounded-lg text-slate-500 hover:bg-sky-50 transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="format_align_left">format_align_left</span>
+</button>
+<button class="p-2 rounded-lg text-slate-500 hover:bg-sky-50 transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="format_list_bulleted">format_list_bulleted</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<!-- Color -->
+<button class="p-2 rounded-lg text-slate-500 hover:bg-sky-50 transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="palette">palette</span>
+</button>
+<div class="w-px h-6 bg-outline-variant/30 mx-1"></div>
+<button class="p-2 rounded-lg text-slate-500 hover:bg-sky-50 transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="relative flex-1 p-8 md:p-14 min-h-[500px]">
+<div class="max-w-prose mx-auto">
+<div class="w-full min-h-[400px] text-lg md:text-xl leading-relaxed text-on-surface-variant bg-transparent border-none focus:ring-0 p-0 font-body space-y-6">
+<h1 class="text-4xl md:text-5xl font-headline font-extrabold text-on-surface mt-8 mb-4">Getting Started with Markdown</h1>
+<p>Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.</p>
+<div class="space-y-4">
+<h3 class="text-2xl font-headline font-bold text-on-surface">Key Features:</h3>
+<ul class="list-disc list-outside ml-6 space-y-2">
+<li><strong class="font-bold text-on-surface">Easy to read</strong>: Markdown is designed to be readable as-is.</li>
+<li><strong class="font-bold text-on-surface">Portable</strong>: Works across almost all platforms.</li>
+<li><strong class="font-bold text-on-surface">Fast</strong>: Format as you type without leaving your keyboard.</li>
+</ul>
+</div>
+<p>Try adding some <em class="italic">italic</em> text or a <a class="text-primary hover:underline font-medium" href="https://example.com">link</a>!</p>
+</div>
+</div>
+</main>
+</div>
+<!-- Floating Background Decor -->
+<div class="fixed -bottom-20 -left-20 w-80 h-80 bg-primary-container/10 rounded-full blur-[100px] pointer-events-none z-[-1]"></div>
+<div class="fixed top-40 -right-20 w-60 h-60 bg-tertiary-container/10 rounded-full blur-[80px] pointer-events-none z-[-1]"></div>
+</body></html>

@@ -1,0 +1,35 @@
+appId: com.dwkim.memo
+productName: Memo
+copyright: Copyright © 2026 dwkim
+directories:
+  output: release
+  buildResources: build
+files:
+  - out/**/*
+  - package.json
+  - "!node_modules/**/{CHANGELOG.md,README.md,readme.md}"
+asar: true
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+  # icon: build/icon.ico   # add a 256x256 .ico here for branded installer
+  artifactName: ${productName}-Setup-${version}.${ext}
+portable:
+  artifactName: ${productName}-Portable-${version}.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Memo
+  runAfterFinish: true
+  uninstallDisplayName: Memo
+publish:
+  provider: github
+  releaseType: release

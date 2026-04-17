@@ -1,0 +1,282 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+.font-headline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  user-select: none;
+}
+
+.material-symbols-outlined.fill {
+  font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+}
+
+::selection {
+  background-color: #93dbff;
+  color: #004d67;
+}
+
+.app-window {
+  box-shadow:
+    0 32px 64px -12px rgba(0, 98, 140, 0.08),
+    0 16px 32px -16px rgba(0, 98, 140, 0.04);
+}
+
+.app-drag {
+  -webkit-app-region: drag;
+}
+.app-no-drag {
+  -webkit-app-region: no-drag;
+}
+
+/* Editor styles — map theme typography onto ProseMirror output */
+.ProseMirror {
+  outline: none;
+  min-height: 320px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #595c5e;
+}
+
+.ProseMirror:focus {
+  outline: none;
+}
+
+.ProseMirror h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  margin: 2rem 0 1rem;
+  color: #2c2f31;
+}
+.ProseMirror h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  margin: 1.75rem 0 0.75rem;
+  color: #2c2f31;
+}
+.ProseMirror h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 1.2;
+  margin: 1.5rem 0 0.5rem;
+  color: #2c2f31;
+}
+
+.ProseMirror p {
+  margin: 0.75rem 0;
+}
+
+.ProseMirror strong {
+  font-weight: 700;
+  color: #2c2f31;
+}
+
+.ProseMirror em {
+  font-style: italic;
+}
+
+.ProseMirror u {
+  text-decoration: underline;
+}
+
+.ProseMirror a {
+  color: #00628c;
+  font-weight: 500;
+  text-decoration: none;
+}
+.ProseMirror a:hover {
+  text-decoration: underline;
+}
+.ProseMirror a[href] {
+  cursor: text;
+}
+.ProseMirror a[href]:hover {
+  cursor: pointer;
+}
+
+.ProseMirror mark {
+  padding: 0 0.125rem;
+  border-radius: 0.2rem;
+}
+
+/* Tables */
+.ProseMirror .memo-table,
+.ProseMirror table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+.ProseMirror th,
+.ProseMirror td {
+  border: 1px solid #d0d5d8;
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+  position: relative;
+  min-width: 2rem;
+}
+.ProseMirror th {
+  background-color: #eef1f3;
+  font-weight: 600;
+  color: #2c2f31;
+  text-align: left;
+}
+.ProseMirror td p,
+.ProseMirror th p {
+  margin: 0;
+}
+.ProseMirror .selectedCell:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 98, 140, 0.12);
+  pointer-events: none;
+  z-index: 2;
+}
+.ProseMirror .column-resize-handle {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: -2px;
+  width: 4px;
+  background-color: #00628c;
+  pointer-events: none;
+}
+.ProseMirror.resize-cursor {
+  cursor: ew-resize;
+}
+
+/* Search highlights — ProseMirror decorations */
+.ProseMirror .search-hit {
+  background-color: #ffe08a;
+  border-radius: 0.15rem;
+}
+.ProseMirror .search-hit-current {
+  background-color: #ffb020;
+  box-shadow: 0 0 0 2px #ffb020;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 1.5rem;
+  margin: 0.75rem 0;
+}
+.ProseMirror ul {
+  list-style: disc;
+}
+.ProseMirror ol {
+  list-style: decimal;
+}
+.ProseMirror li {
+  margin: 0.25rem 0;
+}
+
+.ProseMirror blockquote {
+  border-left: 3px solid #abadaf;
+  padding-left: 1rem;
+  color: #595c5e;
+  margin: 1rem 0;
+}
+
+.ProseMirror code {
+  background: #eef1f3;
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.375rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.95em;
+}
+
+.ProseMirror pre {
+  background: #eef1f3;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+.ProseMirror pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.ProseMirror hr {
+  border: none;
+  border-top: 1px solid #abadaf;
+  margin: 1.5rem 0;
+}
+
+.ProseMirror ul[data-type='taskList'] {
+  list-style: none;
+  padding-left: 0.25rem;
+}
+.ProseMirror ul[data-type='taskList'] li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.ProseMirror ul[data-type='taskList'] li > label {
+  flex: none;
+  margin-top: 0.3rem;
+}
+.ProseMirror ul[data-type='taskList'] li > div {
+  flex: 1;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  color: #9a9d9f;
+  pointer-events: none;
+  float: left;
+  height: 0;
+}
+
+/* Toast */
+.toast-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.toast-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 150ms ease-out;
+}
+
+/* Scrollbar — subtle */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(116, 119, 121, 0.25);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(116, 119, 121, 0.45);
+  background-clip: content-box;
+}
